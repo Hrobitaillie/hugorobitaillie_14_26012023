@@ -7,8 +7,5 @@ export default defineConfig(({ command, mode }) => {
 
   return {
     plugins: [react(), svgr()],
-    build: {
-      outDir: "../docs",
-    },
   };
 });
