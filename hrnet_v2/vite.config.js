@@ -7,5 +7,6 @@ export default defineConfig({
   plugins: [
     react(), 
     svgr(),
-  ]
+  ],
+  base: '/hugorobitaillie_14_26012023/'
 })
