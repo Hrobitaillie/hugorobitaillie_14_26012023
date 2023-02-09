@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Layout/Header";
 import Layout from "./components/Layout/Layout";
 import NewEmployee from "./pages/NewEmployee";
@@ -11,14 +11,14 @@ export default function App() {
 
   return (
     <Fragment>
-      <HashRouter basename={routeBasename}>
+      <BrowserRouter basename={routeBasename}>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<NewEmployee />} />
             <Route path="/team" element={<Team />} />
           </Route>
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </Fragment>
   );
 }

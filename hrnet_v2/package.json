@@ -24,6 +24,7 @@
     "material-react-table": "^1.5.12",
     "material-table": "^1.69.3",
     "moment": "^2.29.4",
+    "netlify-cli": "^12.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-query": "^3.39.3",

@@ -8,7 +8,7 @@ export default defineConfig(({ command, mode }) => {
 
   return {
     plugins: [react(), svgr()],
-    base: env.VITE_ROUTE_BASENAME,
+    base: env.BASE_URL,
     build: {
       outDir: "../docs",
     },
