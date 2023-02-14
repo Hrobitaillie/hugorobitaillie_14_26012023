@@ -8563,36 +8563,6 @@ const featureBundle = {
  */
 const motion = /*@__PURE__*/ createMotionProxy((Component, config) => createDomMotionConfig(Component, config, featureBundle, createDomVisualElement, HTMLProjectionNode));
 
-function styleInject(css, ref) {
-  if ( ref === void 0 ) ref = {};
-  var insertAt = ref.insertAt;
-
-  if (!css || typeof document === 'undefined') { return; }
-
-  var head = document.head || document.getElementsByTagName('head')[0];
-  var style = document.createElement('style');
-  style.type = 'text/css';
-
-  if (insertAt === 'top') {
-    if (head.firstChild) {
-      head.insertBefore(style, head.firstChild);
-    } else {
-      head.appendChild(style);
-    }
-  } else {
-    head.appendChild(style);
-  }
-
-  if (style.styleSheet) {
-    style.styleSheet.cssText = css;
-  } else {
-    style.appendChild(document.createTextNode(css));
-  }
-}
-
-var css_248z = "/*\n! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com\n*/*,:after,:before{border:0 solid;box-sizing:border-box}:after,:before{--tw-content:\"\"}html{-webkit-text-size-adjust:100%;font-feature-settings:normal;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4}body{line-height:inherit;margin:0}hr{border-top-width:1px;color:inherit;height:0}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{border-collapse:collapse;border-color:inherit;text-indent:0}button,input,optgroup,select,textarea{color:inherit;font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{color:#9ca3af;opacity:1}input::placeholder,textarea::placeholder{color:#9ca3af;opacity:1}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{height:auto;max-width:100%}[hidden]{display:none}*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.visible{visibility:visible}.absolute{position:absolute}.top-1\\/2{top:50%}.left-1\\/2{left:50%}.ml-2{margin-left:.5rem}.block{display:block}.flex{display:flex}.hidden{display:none}.h-full{height:100%}.h-screen{height:100vh}.w-full{width:100%}.w-\\[400px\\]{width:400px}.w-screen{width:100vw}.basis-full{flex-basis:100%}.-translate-x-1\\/2{--tw-translate-x:-50%}.-translate-x-1\\/2,.-translate-y-1\\/2{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\\/2{--tw-translate-y:-50%}.cursor-pointer{cursor:pointer}.items-center{align-items:center}.gap-4{gap:1rem}.overflow-hidden{overflow:hidden}.rounded{border-radius:.25rem}.border-l-4{border-left-width:4px}.border-\\[\\#1BA11B\\]{--tw-border-opacity:1;border-color:rgb(27 161 27/var(--tw-border-opacity))}.border-\\[\\#CC2727\\]{--tw-border-opacity:1;border-color:rgb(204 39 39/var(--tw-border-opacity))}.bg-green{--tw-bg-opacity:1;background-color:rgb(147 173 24/var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity))}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-3{padding-bottom:.75rem;padding-top:.75rem}.font-bold{font-weight:700}.uppercase{text-transform:uppercase}.text-\\[\\#1BA11B\\]{--tw-text-opacity:1;color:rgb(27 161 27/var(--tw-text-opacity))}.text-\\[\\#CC2727\\]{--tw-text-opacity:1;color:rgb(204 39 39/var(--tw-text-opacity))}.opacity-50{opacity:.5}.opacity-70{opacity:.7}.shadow-\\[0px_0px_6px_rgba\\(0\\2c 0\\2c 0\\2c 0\\.15\\)\\]{--tw-shadow:0px 0px 6px rgba(0,0,0,.15);--tw-shadow-colored:0px 0px 6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.transition-all{transition-duration:.15s;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1)}.hover\\:scale-150:hover{--tw-scale-x:1.5;--tw-scale-y:1.5;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}";
-styleInject(css_248z);
-
 const MyPopup = ({
   text,
   type,
@@ -8613,14 +8583,14 @@ const MyPopup = ({
   return /*#__PURE__*/React.createElement("section", {
     className: "w-full h-full"
   }, /*#__PURE__*/React.createElement("div", {
-    className: " w-screen h-screen absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white opacity-70 " + (trigger ? "block" : "hidden")
+    className: " w-screen h-screen absolute top-1--2 left-1--2 -translate-x-1--2 -translate-y-1--2 bg-white opacity-70 " + (trigger ? "block" : "hidden")
   }), /*#__PURE__*/React.createElement(motion.div, {
-    className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] shadow-[0px_0px_6px_rgba(0,0,0,0.15)] rounded overflow-hidden bg-white",
+    className: "absolute top-1--2 left-1--2 -translate-x-1--2 -translate-y-1--2 w-400 shadow-popup rounded overflow-hidden bg-white",
     animate: trigger ? "open" : "closed",
     variants: displayAnimations,
     initial: "close"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "w-full h-full border-l-4 flex px-5 py-3 items-center gap-4 " + (type === "success" ? "border-[#1BA11B]" : type === "error" ? "border-[#CC2727]" : "")
+    className: "w-full h-full border-l-4 flex px-5 py-3 items-center gap-4 " + (type === "success" ? "border-green" : type === "error" ? "border-red" : "")
   }, /*#__PURE__*/React.createElement("span", null, type === "success" ? /*#__PURE__*/React.createElement(SuccessIcon, {
     stroke: "#1BA11B",
     width: "25px",
@@ -8632,9 +8602,9 @@ const MyPopup = ({
   }) : ""), /*#__PURE__*/React.createElement("div", {
     className: "basis-full"
   }, /*#__PURE__*/React.createElement("p", {
-    className: "font-bold uppercase " + (type === "success" ? "text-[#1BA11B]" : type === "error" ? "text-[#CC2727]" : "")
-  }, title), text), /*#__PURE__*/React.createElement("span", {
-    className: " cursor-pointer ml-2 hover:scale-150 transition-all",
+    className: "font-bold uppercase " + (type === "success" ? "text-green" : type === "error" ? "text-red" : "")
+  }, title), /*#__PURE__*/React.createElement("p", null, text)), /*#__PURE__*/React.createElement("span", {
+    className: " cursor-pointer ml-2 hover-scale-150 transition-all",
     onClick: onClose
   }, /*#__PURE__*/React.createElement(CloseIcon, null)))));
 };

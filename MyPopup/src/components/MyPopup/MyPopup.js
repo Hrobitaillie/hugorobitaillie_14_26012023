@@ -2,11 +2,10 @@ import { ErrorIcon } from "../ErrorIcon";
 import { SuccessIcon } from "../SuccessIcon";
 import { CloseIcon } from "../CloseIcon";
 import { motion } from "framer-motion";
-import "../../styles/tailwind.css";
+import "../../styles/style.css";
 import React from "react";
 
 export const MyPopup = ({ text, type, title, trigger, onClose }) => {
-
   const displayAnimations = {
     open: {
       opacity: 1,
@@ -20,10 +19,15 @@ export const MyPopup = ({ text, type, title, trigger, onClose }) => {
 
   return (
     <section className="w-full h-full">
-      <div className={" w-screen h-screen absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white opacity-70 " + (trigger ? "block" : "hidden")}></div>
+      <div
+        className={
+          " w-screen h-screen absolute top-1--2 left-1--2 -translate-x-1--2 -translate-y-1--2 bg-white opacity-70 " +
+          (trigger ? "block" : "hidden")
+        }
+      ></div>
       <motion.div
         className={
-          "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] shadow-[0px_0px_6px_rgba(0,0,0,0.15)] rounded overflow-hidden bg-white"
+          "absolute top-1--2 left-1--2 -translate-x-1--2 -translate-y-1--2 w-400 shadow-popup rounded overflow-hidden bg-white"
         }
         animate={trigger ? "open" : "closed"}
         variants={displayAnimations}
@@ -33,9 +37,9 @@ export const MyPopup = ({ text, type, title, trigger, onClose }) => {
           className={
             "w-full h-full border-l-4 flex px-5 py-3 items-center gap-4 " +
             (type === "success"
-              ? "border-[#1BA11B]"
+              ? "border-green"
               : type === "error"
-              ? "border-[#CC2727]"
+              ? "border-red"
               : "")
           }
         >
@@ -53,18 +57,18 @@ export const MyPopup = ({ text, type, title, trigger, onClose }) => {
               className={
                 "font-bold uppercase " +
                 (type === "success"
-                  ? "text-[#1BA11B]"
+                  ? "text-green"
                   : type === "error"
-                  ? "text-[#CC2727]"
+                  ? "text-red"
                   : "")
               }
             >
               {title}
             </p>
-            {text}
+            <p>{text}</p>
           </div>
           <span
-            className=" cursor-pointer ml-2 hover:scale-150 transition-all"
+            className=" cursor-pointer ml-2 hover-scale-150 transition-all"
             onClick={onClose}
           >
             <CloseIcon />
