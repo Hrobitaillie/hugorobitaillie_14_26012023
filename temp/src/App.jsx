@@ -1,6 +1,8 @@
 import { useState } from 'react'
-import { useCycle } from "framer-motion"
 import { MyPopup } from "kayt0-mypopup"
+
+import { useCycle } from "framer-motion"
+
 import './App.css'
 
 function App() {

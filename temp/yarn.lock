@@ -634,10 +634,10 @@ json5@^2.2.2:
   resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
   integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
 
-kayt0-mypopup@^1.1.6:
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/kayt0-mypopup/-/kayt0-mypopup-1.1.6.tgz#ac8f77dd420b4ecd24b00ca457074be904fca653"
-  integrity sha512-ENmXInPPPp0axm6RVfbiqpkbuhP4RvEpBg4k++RFFqQ5at3QyCufM46T+mrMP9Y21Qhr5E6jB1l34+r9anO/8Q==
+kayt0-mypopup@^1.1.9:
+  version "1.1.9"
+  resolved "https://registry.yarnpkg.com/kayt0-mypopup/-/kayt0-mypopup-1.1.9.tgz#79bf7d7cbbf5895ddb5a379204a1c8e1ddc48775"
+  integrity sha512-vVp9Mtnfc1O0CeVtsxwvsvjxIAhkJn1XaCJ5pnjRTqAMf0LE1VpXg8NPaOGyoclpaY+XD92PnXX1etvz2cXhHQ==
   dependencies:
     framer-motion "^9.0.2"
     react "^18.2.0"

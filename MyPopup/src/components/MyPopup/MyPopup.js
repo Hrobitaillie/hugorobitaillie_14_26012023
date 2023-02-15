@@ -37,7 +37,7 @@ export const MyPopup = ({ text, type, title, trigger, onClose }) => {
           className={
             "w-full h-full border-l-4 flex px-5 py-3 items-center gap-4 " +
             (type === "success"
-              ? "border-green"
+              ? "border-mypopup-green"
               : type === "error"
               ? "border-red"
               : "")
@@ -55,7 +55,7 @@ export const MyPopup = ({ text, type, title, trigger, onClose }) => {
           <div className="basis-full">
             <p
               className={
-                "font-bold uppercase " +
+                "font-bold uppercase align-left " +
                 (type === "success"
                   ? "text-green"
                   : type === "error"
@@ -65,7 +65,7 @@ export const MyPopup = ({ text, type, title, trigger, onClose }) => {
             >
               {title}
             </p>
-            <p>{text}</p>
+            <p className=" align-left text-black">{text}</p>
           </div>
           <span
             className=" cursor-pointer ml-2 hover-scale-150 transition-all"

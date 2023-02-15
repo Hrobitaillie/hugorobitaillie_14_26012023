@@ -5936,12 +5936,21 @@ jwt-decode@^3.0.0:
   resolved "https://registry.yarnpkg.com/jwt-decode/-/jwt-decode-3.1.2.tgz#3fb319f3675a2df0c2895c8f5e9fa4b67b04ed59"
   integrity sha512-UfpWE/VZn0iP50d8cz9NrZLM9lSWhcJ+0Gt/nm4by88UL+J1SiKN8/5dkjMmbEzwL2CAe+67GsegCbIKtbp75A==
 
-kayt0-mypopup@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/kayt0-mypopup/-/kayt0-mypopup-1.1.1.tgz#a93a01ad86db25d20f5ddafaa693ab5e99f79c31"
-  integrity sha512-HADAfRmRZJVJNq5xNeIY8xyW/SymYQJpNRhKiGC6+ENljBtG120L9MRcLzVoamtVw8vcVfOEVuyzplDXZ2fTaw==
+kayt0-mymodal@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/kayt0-mymodal/-/kayt0-mymodal-1.1.6.tgz#6cca9c074694a2362f4545d141a6c370281b4081"
+  integrity sha512-kEgernr3Y7vA5W7L+htnf5LH7vVGFdfOmfVw+btaa5gDvCINxkkoSHGIMCHsJ0JJ2kSUxyvmm5uJwZWgSYsZyA==
   dependencies:
     framer-motion "^9.0.2"
+    react "^18.2.0"
+
+kayt0-mypopup@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/kayt0-mypopup/-/kayt0-mypopup-1.2.0.tgz#4c40433c011cece415a591f006e4bc7142fa0433"
+  integrity sha512-tZZ146FS/oEoAP9DAqx/+Y+0cPpIIr7pL77mUg9NtYJzSxW25OqgWWR29ugD90qkAo38EANVk7A1LYvTI6YO3g==
+  dependencies:
+    framer-motion "^9.0.2"
+    react "^18.2.0"
 
 keep-func-props@^4.0.0:
   version "4.0.1"
