@@ -1,6 +1,6 @@
 {
   "name": "kayt0-mymodal",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "A simple react component library to display modals",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "concurrently 'yarn:watch:*'",
     "watch:storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "watch:tailwind": "npx tailwindcss -i ./src/tailwind-input.css -o ./src/styles/tailwind.css --watch",
@@ -33,6 +33,7 @@
     "babel-loader": "^8.3.0",
     "concurrently": "^7.6.0",
     "react-dom": "^18.2.0",
+    "rollup": "^3.15.0",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2"
