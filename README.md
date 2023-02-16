@@ -5,9 +5,8 @@ The goal was to convert a JQuery Application to a React Application.
 
 HRnet is a human ressource's application of Wealth Health Compagny
 
-
-[![forthebadge](https://github.com/Hrobitaillie/hugorobitaillie_14_26012023/blob/master/react-app-on-netlify.svg](https://oc14-react.netlify.app)             |  [![forthebadge](dhttps://github.com/Hrobitaillie/hugorobitaillie_14_26012023/blob/master/jquery-app-on-netlify.svg)](oc14-jquery.netlify.app)
-:-------------------------:|:-------------------------:
+[![Jquery App](https://github.com/Hrobitaillie/hugorobitaillie_14_26012023/blob/master/jquery-app-on-netlify.svg)](https://oc14-react.netlify.app)
+[![React App](https://github.com/Hrobitaillie/hugorobitaillie_14_26012023/blob/master/react-app-on-netlify.svg)](https://oc14-jquery.netlify.app)
 
 ## Installation
 
