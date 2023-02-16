@@ -3,6 +3,7 @@ import DepartmentList from "../../assets/data/DepartmentList.json"
 
 export default function MockEmployeesList(){
     let baseEmployees = []
+    
     function createRandomUser(){
         let newId;
         if (baseEmployees.length) {
